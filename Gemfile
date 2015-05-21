@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+	gem 'sqlite3'
+end
 # Note: the following gem may not load, use "gem install pg -v '0.18.2'" command instead
 # If bundle fails, run 'sudo apt-get install libpq-dev' and then 'bundle install' again
 # PostgreSQL 

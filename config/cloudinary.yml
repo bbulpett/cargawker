@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: mushroom-cloud
+  api_key: '758168867535125'
+  api_secret: 9k0SefMNUghVM4byjkkbDj6Dvf8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: mushroom-cloud
+  api_key: '758168867535125'
+  api_secret: 9k0SefMNUghVM4byjkkbDj6Dvf8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: mushroom-cloud
+  api_key: '758168867535125'
+  api_secret: 9k0SefMNUghVM4byjkkbDj6Dvf8
+  enhance_image_tag: true
+  static_image_support: false

@@ -14,7 +14,7 @@ default: &default
 development:
   <<: *default
   database: cargawker_development
-  username: admin
+  username: postgres
   password: Pa55w0rd
 
 # Warning: The database defined as "test" will be erased and
@@ -22,10 +22,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
-  username: admin
+  database: cargawker_test
+  username: postgres
   password: Pa55w0rd
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: cargawker_production

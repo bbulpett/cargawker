@@ -11,6 +11,7 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'car_icon.png' %>
+
   </head>
 
   <body>
@@ -19,5 +20,6 @@
     <div id="content-wrapper">
       <%= yield %>
     </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>

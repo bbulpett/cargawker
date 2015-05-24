@@ -3,19 +3,14 @@
 <h1>Listing Posts</h1>
 
 
-<img src="http://res.cloudinary.com/mushroom-cloud/image/upload/sample.jpg" 
-     width="636" height="424"/>
-
-
 <div id="posts"> 
   <% @posts.each do|post| %> 
     <div id="post"> 
       <h3><%= post.title %></h3> 
+      <%= cl_image_tag("vlv78lpyihdsnexi9dy2.jpg", :width => 300, :height => 240, :crop => :fill) %>
       <%= simple_format post.body %> 
-      <small> 
-        <%= link_to 'Edit', edit_post_path(post) %> | 
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> 
-      </small> 
+      <%= link_to 'Edit', edit_post_path(post) %> | 
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> 
     </div>
   <% end %> 
 </div>

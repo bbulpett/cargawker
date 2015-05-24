@@ -42,7 +42,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'carrierwave'
-gem 'cloudinary'
+gem 'cloudinary', '~> 1.0.24'
+gem 'attachinary'
 
 gem 'foundation-rails'
 

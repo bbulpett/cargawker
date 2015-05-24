@@ -19,6 +19,12 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
+
+  <div class="image_upload">
+    <%= f.hidden_field(:picture_cache) %>
+    <%= f.file_field(:picture) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

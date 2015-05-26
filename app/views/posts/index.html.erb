@@ -1,20 +1,31 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Posts</h1>
-
-
 <div id="posts"> 
   <% @posts.each do|post| %> 
-    <div id="post"> 
-      <h3><%= post.title %></h3> 
-      <%= cl_image_tag("vlv78lpyihdsnexi9dy2.jpg", :width => 300, :height => 240, :crop => :fill) %>
-      <%= simple_format post.body %> 
-      <%= link_to 'Edit', edit_post_path(post) %> | 
-      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> 
+    <div id="post">
+      <h5 class="figtitle"><%= post.title %></h5> 
+      <figure>
+        <%= cl_image_tag("vlv78lpyihdsnexi9dy2.jpg", :width => 320, :height => 320, :crop => :fill) %>
+        <figcaption class="bottom-caption">
+          <%= simple_format post.body %>
+          <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
+          <%= link_to 'Destroy', post, method: :delete, :class=> 'button tiny alert', data: { confirm: 'Are you sure?' } %>
+        </figcaption>
+      </figure>
+      
     </div>
   <% end %> 
 </div>
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, :class => "button small success" %>
+
+<script>
+    $(document).ready(function() {
+      $("figure").hover(function() {
+          $(this).find('.figtitle').show();
+      }, function() {
+          $(this).find('.figtitle').hide();
+      });
+    });
+</script>

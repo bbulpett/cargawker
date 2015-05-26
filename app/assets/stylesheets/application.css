@@ -21,7 +21,6 @@ body {
 
 #content-wrapper {
 	border-top: 2px solid #4A4A4A;
-	border-bottom: 2px solid #4A4A4A;
 	padding: 0 2.5%;
 }
 
@@ -30,6 +29,10 @@ body {
 }
 
 footer {
+	border-top: 2px solid #4A4A4A;
+	position: relative;
+	bottom: 0;
+	width: 100%;
 	background-color: #6C6C6A;
 	color: #FFF;
 	margin: 0;
@@ -37,3 +40,43 @@ footer {
 	height: 55px;
 	padding-top: 15px;
 }
+
+.name h1>a {
+	font-weight: 300;
+	font-size: 150%;
+}
+
+a.button {
+	color: #FFF;
+}
+
+.bottom-caption {
+	padding: 10px;
+	background: #FFF;
+}
+
+figcaption .button {
+	width: 48.7%;
+	margin: 0 inherit;
+}
+
+.figtitle {
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	padding: 5px;
+	color: #FFF;
+	position: relative;
+	top: 47px;
+	left: 40px;
+	display: none;
+}
+
+#post {
+	width: 320px;
+	margin: 30px 15px;
+}
+
+#post>figure {
+	width: 320px;
+}
+

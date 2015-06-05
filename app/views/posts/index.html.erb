@@ -4,7 +4,7 @@
     <div id="post">
       <h5 class="figtitle"><%= post.title %></h5> 
       <figure>
-        <%= cl_image_tag("vlv78lpyihdsnexi9dy2.jpg", :width => 320, :height => 320, :crop => :fill) %>
+        <%= cl_image_tag(post.picture, :width => 320, :height => 320, :crop => :fill) %>
         <figcaption class="bottom-caption">
           <%= simple_format post.body %>
           <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 

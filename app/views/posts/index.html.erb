@@ -1,19 +1,23 @@
 <p id="notice"><%= notice %></p>
 <div id="posts"> 
-  <% @posts.each do|post| %> 
-    <div id="post">
-      <h5 class="figtitle"><%= post.title %></h5> 
-      <figure>
-        <%= cl_image_tag(post.picture, :width => 320, :height => 320, :crop => :fill) %>
-        <figcaption class="bottom-caption">
-          <%= simple_format post.body %>
-          <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
-          <%= link_to 'Destroy', post, method: :delete, :class=> 'button tiny alert', data: { confirm: 'Are you sure?' } %>
-        </figcaption>
-      </figure>
-      
-    </div>
-  <% end %> 
+  <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+    <% @posts.each do|post| %> 
+      <li>
+        <div id="post">
+          <h5 class="figtitle"><%= post.title %></h5> 
+          <figure>
+            <%= cl_image_tag(post.picture, :width => 320, :height => 320, :crop => :fill) %>
+            <figcaption class="bottom-caption">
+              <%= simple_format post.body %>
+              <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
+              <%= link_to 'Destroy', post, method: :delete, :class=> 'button tiny alert', data: { confirm: 'Are you sure?' } %>
+            </figcaption>
+          </figure>
+          
+        </div>
+      </li>
+    <% end %>
+  </ul>
 </div>
 
 <br>

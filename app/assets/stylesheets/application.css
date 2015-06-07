@@ -50,6 +50,14 @@ a.button {
 	color: #FFF;
 }
 
+.top-bar-greeting {
+	font-weight: 100;
+	font-size: 100%;
+	color: #FFF;
+	background-color: transparent !important;
+	padding: 14px;
+}
+
 .bottom-caption {
 	padding: 10px;
 	background: #FFF;
@@ -79,4 +87,3 @@ figcaption .button {
 #post>figure {
 	width: 320px;
 }
-

@@ -17,15 +17,15 @@
   <body>
 
     <%= render 'shared/navigation' %>
-
-    <div id="content-wrapper">
-      <% if notice %>
+    <div id="alert-area">
+    <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
       <% end %>
       <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
-
+    </div>
+    <div id="content-wrapper">
       <%= yield %>
     </div>
     <%= render 'shared/footer' %>

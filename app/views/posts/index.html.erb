@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 <div id="posts"> 
   <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
     <% @posts.each do|post| %> 
@@ -22,7 +22,7 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path, :class => "button small success" %>
+<%= link_to 'New Post', new_post_path, :class => "button small success", :style=>"margin: 0; left: 47.5%;" %>
 
 <script>
     $(document).ready(function() {

@@ -21,11 +21,15 @@ body {
 
 #content-wrapper {
 	border-top: 2px solid #4A4A4A;
-	padding: 0 2.5%;
+	padding: 25px 5%;
 }
 
 .top-bar {
 	margin: 0;
+}
+
+a.button.small.secondary {
+	background-color: #FFF;
 }
 
 footer {
@@ -79,6 +83,10 @@ figcaption .button {
 	display: none;
 }
 
+#posts li {
+	text-indent: 0;
+}
+
 #post {
 	width: 320px;
 	margin: 30px 15px;
@@ -86,4 +94,53 @@ figcaption .button {
 
 #post>figure {
 	width: 320px;
+}
+
+#alert-area .alert {
+		color: #FFF;
+		margin: 0.15em 0; 
+		position: absolute;
+		width: 100%;
+		@include border-radius(0);
+		padding: 0.4em 1em;
+		font-weight: 700;
+		-webkit-animation: alertFades 2s linear 1s 1 forwards;
+		-moz-animation: alertFades 2s linear 1s 1 forwards;
+		-o-animation: alertFades 2s linear 1s 1 forwards;
+		animation: alertFades 2s linear 1s 1 forwards;
+}
+
+#alert-area .alert-success {
+	background: #060;
+}
+
+#alert-area .alert-danger {
+	background: #C00;
+}
+
+@-webkit-keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+@-mos-keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+@-o-keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+@keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+#cancellation-panel {
+	border: 1px solid #600;
+	text-align: center;
+	width: 50%;
+	position: relative;
+	left: 50%;
+	padding: 0;
+	background-color: #FFF;
 }

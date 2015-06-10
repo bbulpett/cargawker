@@ -15,13 +15,25 @@
  *= require foundation_and_overrides
 
  */
+html {
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+	overflow-x: hidden;
+}
+
 body {
 	background-color: #E2E1DD;
 }
 
+figure {
+	margin: 30px 0;
+}
+
 #content-wrapper {
 	border-top: 2px solid #4A4A4A;
-	padding: 25px 5%;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .top-bar {
@@ -72,28 +84,29 @@ figcaption .button {
 	margin: 0 inherit;
 }
 
-.figtitle {
+h5.figtitle {
 	background: rgba(0,0,0,0.6);
 	width: 100%;
 	padding: 5px;
 	color: #FFF;
-	position: relative;
-	top: 47px;
-	left: 40px;
+	position: absolute;
+	margin: 0;
 	display: none;
 }
 
-#posts li {
-	text-indent: 0;
-}
-
-#post {
-	width: 320px;
-	margin: 30px 15px;
-}
-
 #post>figure {
+	position: relative;
 	width: 320px;
+}
+
+#post>img {
+	position: absolute;
+	width: 320px;
+}
+
+#posts>ul {
+	text-align: left;
+	margin-left: 5%;
 }
 
 #alert-area .alert {
@@ -101,7 +114,6 @@ figcaption .button {
 		margin: 0.15em 0; 
 		position: absolute;
 		width: 100%;
-		@include border-radius(0);
 		padding: 0.4em 1em;
 		font-weight: 700;
 		-webkit-animation: alertFades 2s linear 1s 1 forwards;

@@ -4,8 +4,8 @@
     <% @posts.each do|post| %> 
       <li>
         <div id="post">
-          <h5 class="figtitle"><%= post.title %></h5> 
           <figure>
+            <h5 class="figtitle"><%= post.title %></h5> 
             <%= cl_image_tag(post.picture, :width => 320, :height => 320, :crop => :fill) %>
             <figcaption class="bottom-caption">
               <%= simple_format post.body %>
@@ -22,14 +22,14 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path, :class => "button small success", :style=>"margin: 0; left: 47.5%;" %>
+<%= link_to 'New Post', new_post_path, :class => "button small success"%>
 
 <script>
     $(document).ready(function() {
-      $("figure").hover(function() {
-          $(this).find('.figtitle').show();
+      $(" #post ").hover(function() {
+          $(this).find('h5.figtitle').fadeIn();
       }, function() {
-          $(this).find('.figtitle').hide();
+          $(this).find('h5.figtitle').fadeOut();
       });
     });
 </script>

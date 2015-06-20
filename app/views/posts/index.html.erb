@@ -9,8 +9,12 @@
             <%= cl_image_tag(post.picture, :width => 320, :height => 320, :crop => :fill) %>
             <figcaption class="bottom-caption">
               <%= simple_format post.body %>
-              <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
-              <%= link_to 'Destroy', post, method: :delete, :class=> 'button tiny alert', data: { confirm: 'Are you sure?' } %>
+              <% if current_user && current_user.id == post.user_id %>
+                <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
+                <%= link_to 'Destroy', post, method: :delete, :class=> 'button tiny alert', data: { confirm: 'Are you sure?' } %>
+              <% else %>
+                <p>Submitted by <%= post.user.username %> on <%= post.created_at %>.</p>
+              <% end %>
             </figcaption>
           </figure>
           

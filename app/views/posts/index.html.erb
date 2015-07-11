@@ -6,14 +6,22 @@
         <div id="post">
           <figure>
             <h5 class="figtitle"><%= post.title %></h5> 
-            <%= cl_image_tag(post.picture, :width => 320, :height => 320, :crop => :fill) %>
+              <%= link_to cl_image_tag(post.picture, :width => 320, :height => 320, :crop => :fill), post_path(post) %>
             <figcaption class="bottom-caption">
               <%= simple_format post.body %>
-              <% if current_user && current_user.id == post.user_id %>
-                <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
-                <%= link_to 'Destroy', post, method: :delete, :class=> 'button tiny alert', data: { confirm: 'Are you sure?' } %>
-              <% else %>
-                <p>Submitted by <%= post.user.username %> on <%= post.created_at %>.</p>
+              <em>Submitted by <%= post.user.username %> on <%= post.created_at %>.</em>
+              <% if current_user %>
+                <% if post.user_id == current_user.id %>
+                  <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
+                  <%= link_to 'Destroy', post, method: :delete, :class=> 'button tiny alert', data: { confirm: 'Are you sure?' } %>
+                <% elsif current_user.role == 'admin' %>
+                  <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
+                  <%= link_to 'Destroy', post, method: :delete, :class=> 'button tiny alert', data: { confirm: 'Are you sure?' } %>
+                  <% unless post.approved %>
+                    <%= link_to 'Approve', edit_post_path(post), :class=> "button tiny success" %>
+                    <%= link_to 'Reject', edit_post_path(post), :class=> "button tiny warning" %>
+                  <% end %>
+                <% end %>
               <% end %>
             </figcaption>
           </figure>
@@ -26,7 +34,7 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path, :class => "button small success"%>
+  <%= link_to 'New Post', new_post_path, :class => "button small success"%>
 
 <script>
     $(document).ready(function() {

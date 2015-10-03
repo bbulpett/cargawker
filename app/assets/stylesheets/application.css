@@ -26,6 +26,10 @@ body {
 	background-color: #E2E1DD;
 }
 
+body *{
+	font-family: 'Lato', Arial, Verdana, sans-serif;
+}
+
 figure {
 	margin: 30px 0;
 }
@@ -84,6 +88,11 @@ figcaption .button {
 	margin: 0 inherit;
 }
 
+figcaption>em {
+	font-size: 8pt;
+	color: #777;
+}
+
 h5.figtitle {
 	background: rgba(0,0,0,0.6);
 	width: 100%;
@@ -96,17 +105,23 @@ h5.figtitle {
 
 #post>figure {
 	position: relative;
-	width: 320px;
+	width: 275px;
+	box-shadow: 2px 2px 4px #AAA;
 }
 
 #post>img {
 	position: absolute;
-	width: 320px;
+	width: 275px;
 }
 
 #posts>ul {
 	text-align: left;
 	margin-left: 5%;
+}
+
+#posts li{
+	margin: 0;
+	padding: 0;
 }
 
 #alert-area .alert {
@@ -159,4 +174,15 @@ h5.figtitle {
 
 form {
 	margin: 0 20px;
+}
+
+#showPage{
+	text-align: left;
+	margin: 2.5%;
+}
+
+#imageArea figcaption {
+	width: 75%;
+	text-align: center;
+	padding: 10px;
 }

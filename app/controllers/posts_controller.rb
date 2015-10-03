@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.order('created_at DESC')
+    
   end
 
   # GET /posts/1
@@ -15,7 +16,11 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    unless current_user
+        redirect_to new_user_session_path
+      else
+        @post = Post.new
+    end
   end
 
   # GET /posts/1/edit

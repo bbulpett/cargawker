@@ -186,3 +186,7 @@ form {
 	text-align: center;
 	padding: 10px;
 }
+
+.reveal-modal-bg {
+	position: fixed;
+}

@@ -10,7 +10,7 @@
             <figcaption class="bottom-caption">
               <%= simple_format post.body %>
               <em>Submitted by <%= post.user.username %> on <%= post.created_at %>.</em>
-              <br />
+              <br>
               <% if current_user %>
                 <% if post.user_id == current_user.id %>
                   <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
@@ -35,7 +35,12 @@
 
 <br>
   
-  <%= link_to 'New Post', new_post_path, :class => "button small success"%>
+
+  <%= link_to "New Post", '#', data: {:"reveal-id"=>"newPostModal"}, :class=>'button small success' %>
+  <div id="newPostModal" class="reveal-modal" data-reveal>
+      <%= render :template=>"posts/new" %>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
 
 <script>
     $(document).ready(function() {

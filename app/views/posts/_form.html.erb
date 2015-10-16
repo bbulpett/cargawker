@@ -1,4 +1,3 @@
-<% @post = Post.new %>
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -18,13 +17,15 @@
   </div>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :link, :value => '', :placeholder => "post link (please don't link to homepage)" %>
   </div>
 
   <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_field :title, :value => '', :placeholder => "post title" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :body, :value => '', :placeholder => 'description' %>
   </div>
 
   <div class="actions">

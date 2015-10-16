@@ -24,7 +24,7 @@ test:
   <<: *default
   database: cargawker_test
   username: postgres
-  password: Pa55w0rd
+  password: 
 
 production:
   <<: *default

@@ -9,7 +9,7 @@
               <%= link_to cl_image_tag(post.picture, :width => 275, :height => 275, :crop => :fill), post_path(post) %>
             <figcaption class="bottom-caption">
               <%= simple_format post.body %>
-              <em>Submitted by <%= post.user.username %> on <%= post.created_at %>.</em>
+              <em>Submitted by <%= post.user.username %> on <%= post.created_at.to_formatted_s(:short) %>.</em>
               <br>
               <% if current_user %>
                 <% if post.user_id == current_user.id %>
@@ -35,8 +35,9 @@
 
 <br>
   
-
-  <%= link_to "New Post", '#', data: {:"reveal-id"=>"newPostModal"}, :class=>'button small success' %>
+  <% if current_user %>
+    <%= link_to "New Post", '#', data: {:"reveal-id"=>"newPostModal"}, :class=>'button small success' %>
+  <% end %>
   <div id="newPostModal" class="reveal-modal" data-reveal>
       <%= render :template=>"posts/new" %>
     <a class="close-reveal-modal">&#215;</a>

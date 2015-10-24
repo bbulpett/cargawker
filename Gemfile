@@ -14,6 +14,7 @@ group :production do
     gem 'rails_12factor'
         gem 'pg', '>= 0.18.2'
 end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,6 +47,7 @@ gem 'cloudinary', '~> 1.0.24'
 gem 'attachinary'
 
 gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

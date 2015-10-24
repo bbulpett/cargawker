@@ -13,14 +13,14 @@
               <br>
               <% if current_user %>
                 <% if post.user_id == current_user.id %>
-                  <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
-                  <%= link_to 'Destroy', post, method: :delete, :class=> 'button tiny alert', data: { confirm: 'Are you sure?' } %>
+                  <%= link_to '<i class="fi-wrench"></i>'.html_safe, edit_post_path(post) %>
+                  <%= link_to '<i class="fi-trash"></i>'.html_safe, post, method: :delete, data: { confirm: 'Are you sure?' } %>
                 <% elsif current_user.role == 'admin' %>
-                  <%= link_to 'Edit', edit_post_path(post), :class=> "button tiny" %> 
-                  <%= link_to 'Destroy', post, method: :delete, :class=> 'button tiny alert', data: { confirm: 'Are you sure?' } %>
+                  <%= link_to '<i class="fi-star"></i>'.html_safe, edit_post_path(post) %> 
+                  <%= link_to '<i class="fi-trash"></i>'.html_safe, post, method: :delete, data: { confirm: 'Are you sure?' } %>
                   <% unless post.approved %>
-                    <%= link_to 'Approve', edit_post_path(post), :class=> "button tiny success" %>
-                    <%= link_to 'Reject', edit_post_path(post), :class=> "button tiny warning" %>
+                    <%= link_to '<i class="fi-check"></i>'.html_safe, edit_post_path(post) %>
+                    <%= link_to '<i class="fi-x"></i>'.html_safe, edit_post_path(post) %>
                   <% end %>
                 <% end %>
               <% end %>

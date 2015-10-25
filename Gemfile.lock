@@ -52,6 +52,10 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    carrierwave-crop (0.1.2)
+      carrierwave (>= 0.8.0, < 0.11.0)
+      jquery-rails
+      rails (>= 3.2)
     cloudinary (1.0.85)
       aws_cf_signer
       rest-client
@@ -194,6 +198,7 @@ DEPENDENCIES
   attachinary
   byebug
   carrierwave
+  carrierwave-crop
   cloudinary (~> 1.0.24)
   coffee-rails (~> 4.1.0)
   devise

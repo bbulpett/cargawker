@@ -43,6 +43,7 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 
 gem 'carrierwave'
+gem 'carrierwave-crop'
 gem 'cloudinary', '~> 1.0.24'
 gem 'attachinary'
 

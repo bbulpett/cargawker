@@ -81,8 +81,17 @@ a.button {
 }
 
 .bottom-caption {
-	padding: 10px;
+	padding: 5px;
 	background: #FFF;
+}
+
+.bottom-caption i {
+	font-size: 15px;
+	margin: 5px;
+}
+
+#controls {
+	padding: 10px 0;
 }
 
 figcaption .button {

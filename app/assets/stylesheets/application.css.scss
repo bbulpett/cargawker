@@ -114,6 +114,13 @@ h5.figtitle {
 	display: none;
 }
 
+figure img {
+	background-attachment: fixed;
+	background-image: url(../images/Loading_icon.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
 #post>figure {
 	position: relative;
 	width: 275px;

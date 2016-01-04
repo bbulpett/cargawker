@@ -39,6 +39,9 @@ gem 'devise'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+# SEO
+gem 'meta-tags'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

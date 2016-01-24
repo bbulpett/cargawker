@@ -8,7 +8,7 @@
             <h5 class="figtitle"><%= post.title %></h5> 
               <%= link_to cl_image_tag(post.picture, :width => 275, :height => 275, :crop => :fill), post_path(post) %>
             <figcaption class="bottom-caption">
-              <%= simple_format post.body %>
+              <%= simple_format truncate(post.body, length: 42) %>
               <em>Submitted by <%= post.user.username %> on <%= post.created_at.to_formatted_s(:short) %>.</em>
               <br>
               <div id="controls">

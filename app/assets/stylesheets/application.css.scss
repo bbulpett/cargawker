@@ -208,3 +208,13 @@ form {
 .reveal-modal-bg {
 	position: fixed;
 }
+
+@media only screen and (max-width: 480px) {
+	#post figure {
+		width: 95%;
+
+		figcaption, img {
+		width: 100%;
+		}
+	}
+}

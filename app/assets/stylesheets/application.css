@@ -1,0 +1,162 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+html {
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: #E2E1DD;
+}
+
+figure {
+	margin: 30px 0;
+}
+
+#content-wrapper {
+	border-top: 2px solid #4A4A4A;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.top-bar {
+	margin: 0;
+}
+
+a.button.small.secondary {
+	background-color: #FFF;
+}
+
+footer {
+	border-top: 2px solid #4A4A4A;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #6C6C6A;
+	color: #FFF;
+	margin: 142px 0 0 0;
+	text-align: center;
+	height: 55px;
+	padding-top: 15px;
+}
+
+.name h1>a {
+	font-weight: 300;
+	font-size: 150%;
+}
+
+a.button {
+	color: #FFF;
+}
+
+.top-bar-greeting {
+	font-weight: 100;
+	font-size: 100%;
+	color: #FFF;
+	background-color: transparent !important;
+	padding: 14px;
+}
+
+.bottom-caption {
+	padding: 10px;
+	background: #FFF;
+}
+
+figcaption .button {
+	width: 48.7%;
+	margin: 0 inherit;
+}
+
+h5.figtitle {
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	padding: 5px;
+	color: #FFF;
+	position: absolute;
+	margin: 0;
+	display: none;
+}
+
+#post>figure {
+	position: relative;
+	width: 320px;
+}
+
+#post>img {
+	position: absolute;
+	width: 320px;
+}
+
+#posts>ul {
+	text-align: left;
+	margin-left: 5%;
+}
+
+#alert-area .alert {
+		color: #FFF;
+		margin: 0.15em 0; 
+		position: absolute;
+		width: 100%;
+		padding: 0.4em 1em;
+		font-weight: 700;
+		-webkit-animation: alertFades 2s linear 1s 1 forwards;
+		-moz-animation: alertFades 2s linear 1s 1 forwards;
+		-o-animation: alertFades 2s linear 1s 1 forwards;
+		animation: alertFades 2s linear 1s 1 forwards;
+}
+
+#alert-area .alert-success {
+	background: #060;
+}
+
+#alert-area .alert-danger {
+	background: #C00;
+}
+
+@-webkit-keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+@-mos-keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+@-o-keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+@keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+#cancellation-panel {
+	border: 1px solid #600;
+	text-align: center;
+	width: 50%;
+	position: relative;
+	left: 50%;
+	padding: 0;
+	background-color: #FFF;
+}
+
+form {
+	margin: 0 20px;
+}

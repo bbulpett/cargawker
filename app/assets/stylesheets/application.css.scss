@@ -16,7 +16,11 @@
  *= require jquery.jcrop
  */
 @import 'foundation-icons';
- 
+
+html, body, #content-wrapper {
+	height: 100%;
+}
+
 html {
 	margin: 0;
 	padding: 0;
@@ -38,8 +42,10 @@ figure {
 
 #content-wrapper {
 	border-top: 2px solid #4A4A4A;
-	margin: 0 auto;
+	margin: 0 auto 55px;
 	text-align: center;
+	min-height: 100%;
+  height: auto !important;
 }
 
 .top-bar {
@@ -52,17 +58,14 @@ a.button.small.secondary {
 
 footer {
 	border-top: 2px solid #4A4A4A;
-	position: relative;
-	bottom: 0;
 	width: 100%;
 	background-color: #6C6C6A;
 	color: #FFF;
-	margin: 142px 0 0 0;
 	text-align: center;
 	height: 55px;
 	padding-top: 15px;
 }
-
+ 
 .name h1>a {
 	font-weight: 300;
 	font-size: 150%;

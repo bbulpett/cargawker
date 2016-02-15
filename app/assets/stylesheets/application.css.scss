@@ -212,6 +212,10 @@ form {
 	position: fixed;
 }
 
+.reveal-modal h2{
+	text-align: center;
+}
+
 @media only screen and (max-width: 480px) {
 	#post figure {
 		width: 95%;
@@ -219,5 +223,13 @@ form {
 		figcaption, img {
 		width: 100%;
 		}
+	}
+}
+
+.actions {
+	margin: 0 auto;
+
+	a {
+		display: inline-block;
 	}
 }

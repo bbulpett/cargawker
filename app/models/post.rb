@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
 
 	validates_presence_of :link
 	validates_presence_of :picture
-	validates_presence_of :title
-	validates_presence_of :body
+	validates_presence_of :title, length: { maximum: 80 }
+	validates_presence_of :body, length: {maximum: 500 }
 
 end

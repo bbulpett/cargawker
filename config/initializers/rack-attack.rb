@@ -2,8 +2,8 @@ class Rack::Attack
 
   ### Configure Cache ###
 
-  Rack::Attack.blacklist('block 24.196.174.32') do |req|
-    '24.196.174.32' == req.ip
+  Rack::Attack.blacklist('block 184.154.139.9') do |req|
+    '184.154.139.9' == req.ip
   end
   # If you don't want to use Rails.cache (Rack::Attack's default), then
   # configure it here.

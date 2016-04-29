@@ -53,6 +53,9 @@ gem 'attachinary'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 
+# Rack middleware for blocking & throttling abusive requests
+gem 'rack-attack'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

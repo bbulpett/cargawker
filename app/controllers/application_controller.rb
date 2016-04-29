@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :prepare_meta_tags, if: "request.get?"
-
+  before_filter :block_ip_addresses
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def prepare_meta_tags(options={})
@@ -50,4 +50,12 @@ class ApplicationController < ActionController::Base
 	    devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:login, :username, :email, :password, :remember_me) }
 	    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:username, :email, :password, :password_confirmation, :current_password) }
   	end
+
+    def block_ip_addresses
+      head :unauthorized if current_ip_address == "24.196.174.32"
+    end
+
+    def current_ip_address
+      request.env['HTTP_X_REAL_IP'] || request.env['REMOTE_ADDR']
+    end
 end

@@ -6,7 +6,7 @@
 			<figcaption><%= @post.body %></figcaption>
 		</figure>
 	</div>
-	<h3>Go to the source page at: <a href=<%= @post.link %>><%= @post.link %></a></h3>
+	<h3>Go to the source page at: <a href=<%= @post.link %> target="_blank" class="post-link"><%= @post.link %></a></h3>
 	<% if current_user %>
     <% if @post.user_id == current_user.id %>
 			<%= link_to 'Edit', edit_post_path(@post), :class => "button small warning" %>
